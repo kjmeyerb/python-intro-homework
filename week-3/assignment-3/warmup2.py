@@ -1,4 +1,4 @@
-age = 2026 - int(input("What year were you born? "))
+age = int(input("How old are you? "))
 if age <= 12:
     print("You are a Child.")
 elif age > 12 and age <= 17:

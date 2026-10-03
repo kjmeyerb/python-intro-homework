@@ -11,7 +11,7 @@ elif day == "monday" and time == "morning":
     print("Monday mornings are the worst. Go get some coffee!")
 elif day == "friday" and time == "afternoon":
     print("You could attend Salat al-Jumu'ah at a nearby mosque.")
-elif day == "satuday" and time == "morning":
+elif day == "saturday" and time == "morning":
     print("You could attend Shabbat services at a nearby synagogue.")
 elif day == "sunday" and time == "morning":
     print("You could attend a service at a nearby church.")
