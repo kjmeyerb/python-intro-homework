@@ -3,9 +3,8 @@ time = input("Is it morning, afternoon, or evening? ").lower()
 
 if day not in ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]:
     print("I'm sorry, '" + day + "' is not a recognized day of the week. Try again.")
-if time not in ["morning", "afternoon", "evening"]:
+elif time not in ["morning", "afternoon", "evening"]:
     print("I'm sorry, '" + time + "' is not a valid response. Try again.")
-
 elif (day == "saturday" or day == "sunday") and time == "morning":
     print("It's the weekend, go back to sleep!")
 elif (day == "saturday" and (time == "afternoon" or time == "evening")) or (day == "sunday" and time == "afternoon") or (day == "friday" and time == "evening"):
