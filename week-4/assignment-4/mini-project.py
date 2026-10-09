@@ -20,7 +20,7 @@ for student in students:
         top_score["score"]=student["score"]
     if student["score"] > 75:
         high_scorers.append(student["name"])
-print(f"Top scorer:        {top_score["name"]} ({top_score["score"]}%)")
-print(f"Class average:     {average_accum/len(students)}%")
-print(f"Subjects offered:  {subjects}")
-print(f"High scorers:      {high_scorers}")
+print(f'Top scorer:        {top_score["name"]} ({top_score["score"]}%)')
+print(f'Class average:     {average_accum/len(students)}%"')
+print(f'Subjects offered:  {subjects}')
+print(f'High scorers:      {high_scorers}')
