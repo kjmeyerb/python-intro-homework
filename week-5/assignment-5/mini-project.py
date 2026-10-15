@@ -5,16 +5,21 @@ search = 0
 match = False
 choice = ""
 swapped = False
-print("=== Number Cruncher ===" \
+while choice == "":
+    print("\n"
+"\n=== Number Cruncher ===" \
 "\n1. Find minimum"
 "\n2. Find maximum"
 "\n3. Search for a number"
 "\n4. Sort the list"
 "\n5. Quit")
-while choice == "":
     choice = input("Choose an option (1-5): ")
+    print("=======================" \
+    "\n")
     while choice not in ["1","2","3","4","5"]:
         choice = input("Not a valid selection. Please choose option 1-5: ")
+        print("=======================" \
+    "\n")
     if choice == "1": 
         for num in numbers:
             if num < min:
