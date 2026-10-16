@@ -1,12 +1,7 @@
 numbers = [42, 17, 83, 5, 61, 29, 74, 8, 55, 93, 31, 66, 14, 47, 78, 3, 59, 22, 86, 40]
-max = 0
-min = float('inf')
-search = 0
-match = False
 choice = ""
-swapped = False
 while choice == "":
-    print("\n"
+    print(
 "\n=== Number Cruncher ===" \
 "\n1. Find minimum"
 "\n2. Find maximum"
@@ -21,18 +16,21 @@ while choice == "":
         print("=======================" \
     "\n")
     if choice == "1": 
+        min = float('inf')
         for num in numbers:
             if num < min:
                 min = num
         choice=""
         print(f"Minimum value: {min}")   
     elif choice == "2":
+        max = 0
         for num in numbers:
             if num > max:
                 max = num
         choice=""
         print(f"Maximum value: {max}")
     elif choice == "3":
+        search = 0
         match=False
         while True:
             try:
@@ -40,11 +38,15 @@ while choice == "":
                 break
             except ValueError:
                 print("Not a number. Try again.")
+                print("======================="
+                      "\n")
         for i in range(len(numbers)):
             if numbers[i] == search:
                 match = True
-                print(f"Found it! Present at index {i}.")
-        if match == False:
+                break
+        if match == True:
+            print(f"Found it! Present at index {i}.")
+        else:
             print("That number was not found in this list.")
         choice = ""
     elif choice == "4":
@@ -61,7 +63,8 @@ while choice == "":
         print(f"Sorted list: {sorted}")            
         choice = ""
     elif choice == "5":
-        print("Goodbye!")
+        print("Goodbye!"
+              "\n")
         break
     else:
         choice = ""
