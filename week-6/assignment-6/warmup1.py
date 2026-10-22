@@ -1,6 +1,7 @@
 def greet(name, greeting="Hello"):
     print(f"{greeting}, {name.capitalize()}!")
 
-greet("Paz")
-greet("Paz", "Hola")
-greet("Paz", greeting="Hey")
+if __name__ == "__main__":
+    greet("Paz")
+    greet("Paz", "Hola")
+    greet("Paz", greeting="Hey")

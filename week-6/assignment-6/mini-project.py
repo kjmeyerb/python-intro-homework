@@ -77,4 +77,5 @@ def main():
             print("Goodbye!")
             break           
 
-main()
+if __name__ == "__main__":
+    main()
