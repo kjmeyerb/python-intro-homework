@@ -15,8 +15,8 @@ def find_max(numbers):
     return max
 
 def search(numbers, target):
+    index = -1
     for i in range(len(numbers)):
-        index = -1
         if numbers[i] == target:
             index = i
             break
