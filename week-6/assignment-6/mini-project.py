@@ -8,7 +8,7 @@ def find_min(numbers):
     return min 
 
 def find_max(numbers):
-    max = 0
+    max = float('-inf')
     for num in numbers:
         if num > max:
             max = num
@@ -23,14 +23,14 @@ def search(numbers, target):
     return index
 
 def bubble_sort(numbers):
+    new_list=numbers
     swapped = True
     while swapped:
         swapped = False
-        for i in range(len(numbers)-1):
-            if numbers[i] > numbers[i+1]:
-                numbers[i], numbers[i+1] = numbers[i+1], numbers[i]
+        for i in range(len(new_list)-1):
+            if new_list[i] > new_list[i+1]:
+                new_list[i], new_list[i+1] = new_list[i+1], new_list[i]
                 swapped=True
-    new_list = numbers
     return new_list
 
 def show_menu():
@@ -66,10 +66,11 @@ def main():
                     print("Not a number. Try again.")
                     print("======================="
                     "\n")
-            if search(numbers, target) == -1:
+            index = search(numbers,target)
+            if index == -1:
                print("Not found!")
             else:
-                print("Found at index",{search(numbers,target)}) 
+                print("Found at index",{index}) 
         elif choice == "4":
             print("Sorted list: ",bubble_sort(numbers))
         else:
