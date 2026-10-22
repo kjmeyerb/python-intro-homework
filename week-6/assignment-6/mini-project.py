@@ -23,7 +23,9 @@ def search(numbers, target):
     return index
 
 def bubble_sort(numbers):
-    new_list=numbers
+    new_list=list(numbers)
+    print("start numbers",numbers)
+    print("start new list",new_list)
     swapped = True
     while swapped:
         swapped = False
@@ -31,6 +33,8 @@ def bubble_sort(numbers):
             if new_list[i] > new_list[i+1]:
                 new_list[i], new_list[i+1] = new_list[i+1], new_list[i]
                 swapped=True
+    print("post numbers",numbers)
+    print("post new list",new_list)
     return new_list
 
 def show_menu():
