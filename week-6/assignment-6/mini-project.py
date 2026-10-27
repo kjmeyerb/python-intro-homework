@@ -70,7 +70,7 @@ def main():
             if index == -1:
                print("Not found!")
             else:
-                print("Found at index",{index}) 
+                print("Found at index",index) 
         elif choice == "4":
             print("Sorted list: ",bubble_sort(numbers))
         else:

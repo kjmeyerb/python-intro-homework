@@ -6,9 +6,9 @@
  #   print(cheese)
  #         ^^^^^^
 #NameError: name 'cheese' is not defined
-
 def food():
     cheese = "mozzarella"
     return cheese
+
 my_food=food()
 print(my_food)
