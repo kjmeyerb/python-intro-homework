@@ -14,6 +14,11 @@ def parsecategories(records):
         category=input(f"Category not found. Try again. \n{catoptions}\n").capitalize()
     return category
 
+#Ideally, I would create another function to compare the report to any previous report.
+#I would give the client an option to aggregate or create a report of only new records.
+#If aggregate, I would use the write method to overwrite with all the information.
+#If only new, I would filter out existing records and append. 
+
 def catreport(category):
     catrecords = []
     cattotal = 0
