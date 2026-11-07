@@ -18,14 +18,13 @@ def parse_file(file):
             continue
         try:
             report_rows.append({'name':row['name'],'category':row['category'],'amount':float(row['amount'])})
+            row_parsed+=1
         except ValueError as e:
             row_skipped+=1
             report_errors.append(f"Row {i}: Value Error - could not convert '{row['amount']}' to float.")
         except KeyError as e:
             row_skipped+=1
             report_errors.append(f"Row {i}: KeyError - missing expected column.")
-        else:
-            row_parsed+=1
     return row_attempt, row_parsed, row_skipped, report_rows, report_errors
 
 def printsummary(row_attempt, row_parsed, row_skipped, report_rows, report_errors):
@@ -42,8 +41,8 @@ def printsummary(row_attempt, row_parsed, row_skipped, report_rows, report_error
 
 try:
     with open(file, "r") as file:
-        row_attempt, row_parsed, row_skipped, report_rows, report_errors=parse_file(file)
+        results=parse_file(file)
 except FileNotFoundError:
     print("File not found.")
 else:
-    printsummary(row_attempt, row_parsed, row_skipped, report_rows, report_errors)
+    printsummary(*results)
