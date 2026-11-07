@@ -17,7 +17,7 @@ def parse_file(file):
             report_errors.append(f"Row {i}: 'None' detected.")
             continue
         try:
-            report_rows.append([row['name'],row['category'],float(row['amount'])])
+            report_rows.append({'name':row['name'],'category':row['category'],'amount':float(row['amount'])})
         except ValueError as e:
             row_skipped+=1
             report_errors.append(f"Row {i}: Value Error - could not convert '{row['amount']}' to float.")
@@ -38,7 +38,7 @@ def printsummary(row_attempt, row_parsed, row_skipped, report_rows, report_error
         print(line)
     print(f"\nClean Data:")
     for line in report_rows:
-        print(line)
+        print(f"{line['name']} | {line['category']} | {line['amount']}")
 
 try:
     with open(file, "r") as file:

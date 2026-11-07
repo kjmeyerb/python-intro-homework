@@ -9,4 +9,4 @@
 # urllib3==2.8.0
 
 import requests
-print(f"pip version {requests.__version__}")
+print(f"requests version {requests.__version__}")
