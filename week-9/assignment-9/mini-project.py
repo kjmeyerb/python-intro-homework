@@ -67,7 +67,7 @@ def filter_by_region(cleaned_countries):
         if region in available_regions:
             matching_countries = [{"name":country["name"], "population":country["population"]}
                                 for country in cleaned_countries if country["region"]==region]
-            sorted_countries = sorted(matching_countries, key=lambda country: country["population"])
+            sorted_countries = sorted(matching_countries, key=lambda country: country["population"], reverse=True)
             print(f"\n")
             for country in sorted_countries:
                 print(f"{country["name"]}: Population = {country["population"]:,}")

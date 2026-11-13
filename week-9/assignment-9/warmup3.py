@@ -11,7 +11,5 @@ headers = {"Authorization": f"Bearer {API_KEY}"}
 
 response = requests.get(url, headers=headers)
 countries = response.json()["data"]["objects"]
-common_names = []
-for country in countries:
-    common_names.append(country["names"]["common"])
-print(common_names[:10])
+for country in countries[:10]:
+    print(country["names"]["common"])
